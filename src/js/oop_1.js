@@ -1,14 +1,14 @@
 export class Character {
 
     constructor(name, type) {
-        if (name.length < 2 || name.length > 10 || !typeof name == 'string') {
+        if (name.length < 2 || name.length > 10 || typeof name !== 'string') {
             const error = new Error('Error!');
             return error;
         } else {
             this.name = name;
         }
 
-        if (!typeof type == 'string' || type !== 'Bowman' || type !== 'Swordsman' || type !== 'Magician' || type !== 'Daemon' || type !== 'Undead' || type !== 'Zombie') {
+        if (typeof type !== 'string') {
             const error = new Error('Error!');
             return error;
         } else {

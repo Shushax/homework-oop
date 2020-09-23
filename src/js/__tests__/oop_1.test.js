@@ -15,3 +15,16 @@ test('create Character', () => {
 
 expect(received).toEqual(expected);
 });
+
+test('create Character with error', () => {
+    
+    function createCharacter(name, type) {
+        let character = new Character(name, type);
+        return character;
+    }
+
+    expect(() => {
+        createCharacter(123, 345);
+      }).toThrow(Error);
+    
+});
