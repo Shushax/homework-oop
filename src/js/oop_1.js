@@ -8,11 +8,11 @@ export class Character {
             this.name = name;
         }
 
-        if (typeof type !== 'string') {
+        if (typeof type == 'string' && (type == 'Bowman' || type == 'Swordsman' || type == 'Magician' || type == 'Undead' || type == 'Zombie' || type == 'Daemon' )) {
+            this.type = type;
+        } else {
             const error = new Error('Error!');
             return error;
-        } else {
-            this.type = type;
         }
 
         this.health = 100;

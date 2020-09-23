@@ -25,6 +25,6 @@ test('create Character with error', () => {
 
     expect(() => {
         createCharacter(123, 345);
-      }).toThrow(Error);
+      }).toThrow();
     
 });
