@@ -2,8 +2,7 @@ export class Character {
 
     constructor(name, type) {
         if (name.length < 2 || name.length > 10 || typeof name !== 'string') {
-            const error = new Error('Error!');
-            return error;
+            throw new Error('Ошибка!');
         } else {
             this.name = name;
         }
@@ -11,8 +10,7 @@ export class Character {
         if (typeof type == 'string' && (type == 'Bowman' || type == 'Swordsman' || type == 'Magician' || type == 'Undead' || type == 'Zombie' || type == 'Daemon' )) {
             this.type = type;
         } else {
-            const error = new Error('Error!');
-            return error;
+            throw new Error('Ошибка!');
         }
 
         this.health = 100;
@@ -25,8 +23,7 @@ export class Character {
     levelUp() {
 
         if (this.health == 0) {
-            const error = new Error('Error!');
-            return error;
+            throw new Error('Ошибка!');
         } else {
             this.level += 1;
             let procentAttack = (this.attack / 100) * 20;

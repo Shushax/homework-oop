@@ -23,8 +23,8 @@ test('create Character with error', () => {
         return character;
     }
 
-    expect(() => {
-        createCharacter(123, 345);
-      }).toThrow();
+    const received = createCharacter(1, 456789);
+
+    expect(received).toThrow();
     
 });
