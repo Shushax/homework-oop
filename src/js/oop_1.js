@@ -31,6 +31,7 @@ export class Character {
             this.attack += procentAttack;
             this.defence += procentDefence;
             this.health = 100;
+            return this;
         }
         
     }
@@ -39,6 +40,8 @@ export class Character {
         if (this.health >= 0) {
             this.health -= points * (1 - this.defence / 100);
         }
+
+        return this;
     }
 }
 
